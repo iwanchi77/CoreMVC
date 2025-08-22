@@ -1,0 +1,11 @@
+function test() {
+    alert("test");
+};
+
+
+
+$(document).ready(function () {
+    alert("Hello MVC!");
+});
+
+
