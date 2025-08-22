@@ -79,9 +79,9 @@
                 @Html.DisplayFor(modelItem => item.Fax)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+                    <a asp-action="Edit" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Edit</a> |
+                    <a asp-action="Details" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Details</a> |
+                    <a asp-action="Delete" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Delete</a>
             </td>
         </tr>
 }

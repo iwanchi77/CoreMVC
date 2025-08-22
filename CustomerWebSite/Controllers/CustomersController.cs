@@ -28,15 +28,15 @@ namespace CustomerWebSite.Controllers
 		}
 
 		// GET: Customers/Details/5
-		public async Task<IActionResult> Details(string id) //傳回特定客戶資料
+		public async Task<IActionResult> Details(string CustomerID) //傳回特定客戶資料
 		{
-            if (id == null)
+            if (CustomerID == null)
             {
                 return NotFound();      //傳回HTTP 404錯誤
 			}
 
             var customer = await _context.Customers
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
+                .FirstOrDefaultAsync(m => m.CustomerId == CustomerID);
             if (customer == null)
             {
                 return NotFound();      //傳回HTTP 404錯誤
@@ -68,14 +68,14 @@ namespace CustomerWebSite.Controllers
         }
 
         // GET: Customers/Edit/5
-        public async Task<IActionResult> Edit(string id) //把id參數傳入，傳回編輯特定客戶的表單
+        public async Task<IActionResult> Edit(string CustomerID) //把id參數傳入，傳回編輯特定客戶的表單
 		{
-            if (id == null)
+            if (CustomerID == null)
             {
                 return NotFound();  //傳回HTTP 404錯誤
 			}
 
-            var customer = await _context.Customers.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(CustomerID);
             if (customer == null)
             {
                 return NotFound();
@@ -119,15 +119,15 @@ namespace CustomerWebSite.Controllers
         }
 
         // GET: Customers/Delete/5
-        public async Task<IActionResult> Delete(string id) //傳回刪除特定客戶的確認頁面
+        public async Task<IActionResult> Delete(string CustomerID) //傳回刪除特定客戶的確認頁面
 		{
-            if (id == null)
+            if (CustomerID == null)
             {
                 return NotFound();
             }
 
             var customer = await _context.Customers
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
+                .FirstOrDefaultAsync(m => m.CustomerId == CustomerID);
             if (customer == null)
             {
                 return NotFound();
@@ -139,9 +139,9 @@ namespace CustomerWebSite.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]  //指定此方法處理HTTP POST請求，並將動作名稱設為"Delete"
 		[ValidateAntiForgeryToken]        //防止跨站請求偽造攻擊
-		public async Task<IActionResult> DeleteConfirmed(string id) //確認刪除特定客戶
+		public async Task<IActionResult> DeleteConfirmed(string CustomerID) //確認刪除特定客戶
 		{
-            var customer = await _context.Customers.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(CustomerID);
             if (customer != null)
             {
                 _context.Customers.Remove(customer);
@@ -151,9 +151,9 @@ namespace CustomerWebSite.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CustomerExists(string id) //檢查特定客戶是否存在
+        private bool CustomerExists(string CustomerID) //檢查特定客戶是否存在
 		{
-            return _context.Customers.Any(e => e.CustomerId == id);
+            return _context.Customers.Any(e => e.CustomerId == CustomerID);
         }
     }
 }
