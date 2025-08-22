@@ -9,11 +9,14 @@ using CustomerWebSite.Models;
 
 namespace CustomerWebSite.Controllers
 {
+    [Route("/Customers/{action=Index}/{CustomerID?}")]
+
+
     public class CustomersController : Controller //控制器類別，處理客戶相關的請求
 	{
-        private readonly NorthwindContext _context;
+		private readonly NorthwindContext _context;
 
-        public CustomersController(NorthwindContext context) //建構函式，注入資料庫上下文
+		public CustomersController(NorthwindContext context) //建構函式，注入資料庫上下文
 		{
             _context = context; //將注入的NorthwindContext物件賦值給私有欄位_context
 		}

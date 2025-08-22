@@ -50,7 +50,7 @@ namespace CustomerWebSite
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+				pattern: "{controller=Home}/{action=Index}/{CustomerID?}");
 			app.MapRazorPages();
 
 			app.Run();
