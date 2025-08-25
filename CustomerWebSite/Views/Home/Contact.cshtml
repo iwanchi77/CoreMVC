@@ -1,4 +1,5 @@
 ﻿@model ContactViewModel
+<<<<<<< HEAD
 @* 定model型態 *@
 <form asp-controller="Home" asp-action="Contact">
 	<div class="container" style="width:40%">
@@ -27,6 +28,32 @@
 
 		<div class="form-floating mb-3">
 			<input asp-for="Phone" class="form-control" placeholder="">
+=======
+
+<form asp-controller="Home" asp-action="Contact">
+	<div class="container" style="width:40%">
+		<h3 class="mb-3 text-center">輸入聯絡資訊</h3>
+		<div class="mb-3">
+			<label class="form-label">姓名</label>
+			<input class="form-control" placeholder="請輸入姓名"></>
+		</div>
+
+
+		<div class="form-floating mb-3">
+			<input asp-for="Name" class="form-control" placeholder=""></>
+			<label asp-for="Name" class="form-label">@Html.DisplayNameFor(m=>m.Name)</label>
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+
+		<div class="form-floating mb-3">
+			<input asp-for="Email" class="form-control" placeholder=""></>
+			<label asp-for="Email" class="form-label">@Html.DisplayNameFor(m =>m.Email)</label>
+			<span asp-validation-for="Email" class="text-danger"></span>
+		</div>
+
+		<div class="form-floating mb-3">
+			<input asp-for="Phone" class="form-control" placeholder=""></>
+>>>>>>> origin/main
 			<label asp-for="Phone" class="form-label">@Html.DisplayNameFor(m => m.Phone)</label>
 			<span asp-validation-for="Phone" class="text-danger"></span>
 		</div>
@@ -37,6 +64,7 @@
 	</div>
 </form>
 
+<<<<<<< HEAD
 @*增強用戶端的體驗*@
 @section Scripts {
 	@{
@@ -44,3 +72,5 @@
 	}
 }
 
+=======
+>>>>>>> origin/main
