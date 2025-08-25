@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\viewmodels\\contactviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\viewmodels\\contactviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\customerwebsite\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}|CustomerWebSite\\CustomerWebSite.csproj|solutionrelative:customerwebsite\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 115,
+          "DockedWidth": 104,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -34,53 +38,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ContactViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\ViewModels\\ContactViewModel.cs",
-              "RelativeDocumentMoniker": "CustomerWebSite\\ViewModels\\ContactViewModel.cs",
-              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\ViewModels\\ContactViewModel.cs",
-              "RelativeToolTip": "CustomerWebSite\\ViewModels\\ContactViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T03:44:22.915Z",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CustomerWebSite\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CustomerWebSite\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T07:31:21.818Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 131,
-          "SelectedChildIndex": 1,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "CustomerWebSite\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Controllers\\HomeController.cs",
               "RelativeToolTip": "CustomerWebSite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAUwDEAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwEQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T03:50:42.348Z",
+              "WhenOpened": "2025-08-25T07:12:23.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "ContactViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\ViewModels\\ContactViewModel.cs",
+              "RelativeDocumentMoniker": "CustomerWebSite\\ViewModels\\ContactViewModel.cs",
+              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\ViewModels\\ContactViewModel.cs",
+              "RelativeToolTip": "CustomerWebSite\\ViewModels\\ContactViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T07:12:14.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "CustomerWebSite\\Views\\Home\\Contact.cshtml",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Views\\Home\\Contact.cshtml",
               "RelativeToolTip": "CustomerWebSite\\Views\\Home\\Contact.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-25T03:40:28.627Z",
+              "WhenOpened": "2025-08-25T07:12:13.747Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 181,
           "SelectedChildIndex": -1,
           "Children": [
             {
