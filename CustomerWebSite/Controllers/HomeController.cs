@@ -1,4 +1,5 @@
 using CustomerWebSite.Models;
+using CustomerWebSite.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -31,7 +32,28 @@ namespace CustomerWebSite.Controllers
 			return View(context.Customers);  //Customers.cshtml
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		// GET: /Home/Contact
+		[HttpGet]
+		public IActionResult Contact() 
+		{
+
+			return View();  //Contact.cshtml
+		}
+
+		// POST: /Home/Contact
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Contact(ContactViewModel cvm)
+		{
+			if (ModelState.IsValid) //檢查表單欄位資料，通過Server端驗證
+			{
+				//TODO: 將聯絡人資料存入資料庫
+				return RedirectToAction("Index","Home");
+			}
+			return View();  //Contact.cshtml
+		}
+
+			[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

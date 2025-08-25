@@ -5,10 +5,11 @@
     ViewData["Title"] = "Customers";
 }
 
-<h1>客戶總數:@Context.Customers.Count()人</h1>
+<h1>客戶總數:<cache expires-after="@TimeSpan.FromSeconds(60)">@Context.Customers.Count()</cache>人</h1>
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" asp-controller="Customers">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -80,9 +81,9 @@
                 @Html.DisplayFor(modelItem => item.Fax)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+                    <a asp-action="Edit" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Edit</a> |
+                    <a asp-action="Details" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Details</a> |
+                    <a asp-action="Delete" asp-controller="Customers" asp-route-CustomerID="@item.CustomerId">Delete</a>
             </td>
         </tr>
 }
