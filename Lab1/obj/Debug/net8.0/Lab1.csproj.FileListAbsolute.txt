@@ -154,3 +154,4 @@ C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\Lab1\obj\Debug\net8.0\Lab1.pdb
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\Lab1\obj\Debug\net8.0\Lab1.genruntimeconfig.cache
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\Lab1\obj\Debug\net8.0\ref\Lab1.dll
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\Lab1\bin\Debug\net8.0\libman.json
+C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\Lab1\obj\Debug\net8.0\Lab1.sourcelink.json

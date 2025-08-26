@@ -269,3 +269,4 @@ C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\FuenPlatform\obj\Debug\net8.0\refint\
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\FuenPlatform\obj\Debug\net8.0\FuenPlatform.pdb
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\FuenPlatform\obj\Debug\net8.0\FuenPlatform.genruntimeconfig.cache
 C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\FuenPlatform\obj\Debug\net8.0\ref\FuenPlatform.dll
+C:\Users\ispan\Desktop\ASP.NET MVC\CoreMVC\FuenPlatform\obj\Debug\net8.0\FuenPlatform.sourcelink.json

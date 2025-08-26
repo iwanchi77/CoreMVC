@@ -42,25 +42,20 @@ namespace CustomerWebSite.Controllers
 
 		// POST: /Home/Contact
 		[HttpPost]
-<<<<<<< HEAD
+
 		[ValidateAntiForgeryToken] //防止跨站請求偽造攻擊 
 
 		//Bind防止過度張貼攻擊
-		public IActionResult Contact([Bind("Name,Email")]ContactViewModel cvm) //明列所有可以接收的欄位
-=======
-		[ValidateAntiForgeryToken]
-		public IActionResult Contact(ContactViewModel cvm)
->>>>>>> origin/main
+		public IActionResult Contact([Bind("Name,Email,Phone")]ContactViewModel cvm)//明列所有可以接收的欄位
 		{
 			if (ModelState.IsValid) //檢查表單欄位資料，通過Server端驗證
 			{
 				//TODO: 將聯絡人資料存入資料庫
-				return RedirectToAction("Index","Home");
+				return RedirectToAction("Index", "Home");
 			}
 			return View();  //Contact.cshtml
 		}
 
-<<<<<<< HEAD
 		//Action參數直接接收表單欄位資料()
 		//public IActionResult Contact(string Name, string Email, string Phone)
 		//{
@@ -85,9 +80,6 @@ namespace CustomerWebSite.Controllers
 
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-=======
-			[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
->>>>>>> origin/main
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
