@@ -2,6 +2,7 @@ using CustomerWebSite.Models;
 using CustomerWebSite.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Caching.Memory;
 using System.Diagnostics;
 
 namespace CustomerWebSite.Controllers
@@ -11,10 +12,13 @@ namespace CustomerWebSite.Controllers
 	{
 		private readonly ILogger<HomeController> _logger;
 		NorthwindContext _context;
-		public HomeController(ILogger<HomeController> logger, NorthwindContext context)
+		IMemoryCache _cache;
+
+		public HomeController(ILogger<HomeController> logger, NorthwindContext context, IMemoryCache cache)
 		{
 			_logger = logger;
 			_context = context;
+			_cache = cache;
 		}
 
 		public IActionResult Index()
@@ -26,6 +30,21 @@ namespace CustomerWebSite.Controllers
 
 			//設定 Session，並設定 Session 的值
 			HttpContext.Session.SetString("SessionKey", "SessionValue");
+
+			//設定快取 Cache
+			MemoryCacheEntryOptions cacheEntryOptions = new MemoryCacheEntryOptions();
+			cacheEntryOptions.SetSlidingExpiration(TimeSpan.FromDays(1));
+			cacheEntryOptions.SetPriority(CacheItemPriority.Normal);
+			_cache.Set<string>("CacheKey", "CacheValue");
+
+			//設定 Cookie
+			CookieOptions cookieOptions = new CookieOptions();
+			cookieOptions.Expires = DateTime.Now.AddYears(30);
+			cookieOptions.HttpOnly = true;
+			cookieOptions.Secure = true;
+			Response.Cookies.Append("CookieKey", "CookieValue",cookieOptions);
+
+
 			return View();  //Index.cshtml
 		}
 
@@ -33,7 +52,20 @@ namespace CustomerWebSite.Controllers
 		{
 			//讀取 Session 的值
 			string? SessionValue = HttpContext.Session.GetString("SessionKey");
-			if (SessionValue != null) 
+			if (SessionValue != null)
+			{
+
+			}
+			//讀取快取 Cache 的值
+			string? CacheValue = _cache.Get<string>("CacheKey");
+			if(CacheValue != null)
+			{
+				
+			}
+
+			//讀取 Cookie 的值
+			string? CookieValue = Request.Cookies["CookieKey"];
+			if(CookieValue != null)
 			{
 
 			}

@@ -21,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 125,
+          "DockedHeight": 61,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "CustomerWebSite\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "CustomerWebSite\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-26T03:50:32.998Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "CustomerWebSite\\Program.cs",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Program.cs",
               "RelativeToolTip": "CustomerWebSite\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAwDcAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvzcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T03:37:46.471Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "DockedHeight": 358,
+          "DockedHeight": 422,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "CustomerWebSite\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CustomerWebSite\\Controllers\\HomeController.cs",
               "RelativeToolTip": "CustomerWebSite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwBoAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAADwv0QAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T03:50:28.591Z",
               "EditorCaption": ""
