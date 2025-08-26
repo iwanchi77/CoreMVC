@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuenPlatform", "FuenPlatfor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerWebSite", "CustomerWebSite\CustomerWebSite.csproj", "{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoryProducts", "CategoryProducts\CategoryProducts.csproj", "{4055C1B9-E77A-41F0-A4EC-0594A60F3451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A1077A-58CF-4C50-AEFD-2F5B4FAE2926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4055C1B9-E77A-41F0-A4EC-0594A60F3451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4055C1B9-E77A-41F0-A4EC-0594A60F3451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4055C1B9-E77A-41F0-A4EC-0594A60F3451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4055C1B9-E77A-41F0-A4EC-0594A60F3451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
