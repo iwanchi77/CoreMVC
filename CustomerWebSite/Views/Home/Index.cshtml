@@ -3,6 +3,23 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-	<img src="~/images/animal.png" asp-append-version="true"/>
+    <h1 class="display-4">Welcome:@TempData["Message"]</h1>
+	<img style="width:20%" src="~/images/animal.png" asp-append-version="true"/>
+    <div class="container" style="width:40%">
+        <h3 class="mb-3 text-center">請選擇</h3>
+        <div class="form-floating mb-3">
+            <select class="form-select" asp-items="@ViewBag.CustomerCountry"></select>
+            <label class="form-label">國家</label>
+        </div>
+    </div>
 </div>
+
+@section Scripts 
+{
+    <script>
+        @*Razor會被自動HTML編碼(HTML-encode)，如果希望輸出原始內容(不被編碼)，要用@Html.Raw(@ViewBag.Script)*@
+		@Html.Raw(ViewBag.Script)
+
+
+    </script>
+}

@@ -1,6 +1,7 @@
 using CustomerWebSite.Models;
 using CustomerWebSite.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace CustomerWebSite.Controllers
@@ -18,11 +19,25 @@ namespace CustomerWebSite.Controllers
 
 		public IActionResult Index()
 		{
+			ViewBag.CustomerCountry = new SelectList(_context.Customers.Select(c=> c.Country).Distinct());
+			//等同於(舊名稱)
+			//ViewData["CustomerCountry"] = new SelectList(_context.Customers.Select(c => c.Country).Distinct()); 
+			ViewBag.Script = $"alert('客戶人數:{_context.Customers.Count()}')";
+
+			//設定 Session，並設定 Session 的值
+			HttpContext.Session.SetString("SessionKey", "SessionValue");
 			return View();  //Index.cshtml
 		}
 
 		public IActionResult Privacy()
 		{
+			//讀取 Session 的值
+			string? SessionValue = HttpContext.Session.GetString("SessionKey");
+			if (SessionValue != null) 
+			{
+
+			}
+
 			return View();  //Privacy.cshtml
 		}
 		public IActionResult Customers()
@@ -50,6 +65,7 @@ namespace CustomerWebSite.Controllers
 		{
 			if (ModelState.IsValid) //檢查表單欄位資料，通過Server端驗證
 			{
+				TempData["Message"] = "成功!";
 				//TODO: 將聯絡人資料存入資料庫
 				return RedirectToAction("Index", "Home");
 			}
