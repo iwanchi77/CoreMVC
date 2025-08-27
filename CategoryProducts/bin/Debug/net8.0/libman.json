@@ -5,6 +5,10 @@
     {
       "library": "datatable@2.0.2",
       "destination": "wwwroot/lib/datatable/"
+    },
+    {
+      "library": "font-awesome@7.0.0",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }
