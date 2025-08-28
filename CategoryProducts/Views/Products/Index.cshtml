@@ -4,13 +4,18 @@
     ViewData["Title"] = "Index";
 }
 
+@section Styles {
+	<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+	<link href="~/css/mysheet.min.css" rel="stylesheet" />
+}
+
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus"></i>新增商品</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped table-hover table-bordered table-responsive">
+    <thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ProductName)
