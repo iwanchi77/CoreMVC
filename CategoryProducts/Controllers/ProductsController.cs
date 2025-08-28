@@ -21,9 +21,36 @@ namespace CategoryProducts.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
-			//left join
-			return View(_context.Products.Include(p => p.Category));
+            //left join
+            //return View(_context.Products.Include(p => p.Category));
+
+            return View();
         }
+
+		// POST: Products/IndexJson
+		[HttpPost]
+        public async Task<IActionResult> IndexJson() 
+        {
+			var draw = Request.Form["draw"].FirstOrDefault();
+			var start = Convert.ToInt32(Request.Form["start"].FirstOrDefault());
+			var length = Convert.ToInt32(Request.Form["length"].FirstOrDefault());
+			var searchValue = Request.Form["search[value]"].FirstOrDefault()?.ToLower();
+			var query = _context.Products.AsQueryable();
+			if (!string.IsNullOrEmpty(searchValue))
+			{
+				query = query.Where(p => p.ProductName.ToLower().Contains(searchValue));
+			}
+			var totalRecords = _context.Products.Count();
+			var filteredRecords = query.Count();
+			var data = query.Skip(start).Take(length);
+            return Ok(new
+            { 
+                draw = draw, 
+                recordsTotal = totalRecords, 
+                recordsFiltered = filteredRecords, 
+                data = data 
+            });
+		}
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
