@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\categoryproducts\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|solutionrelative:categoryproducts\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\categoryproducts\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|solutionrelative:categoryproducts\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\categoryproducts\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|solutionrelative:categoryproducts\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\categoryproducts\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|solutionrelative:categoryproducts\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|c:\\users\\ispan\\desktop\\asp.net mvc\\coremvc\\categoryproducts\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4055C1B9-E77A-41F0-A4EC-0594A60F3451}|CategoryProducts\\CategoryProducts.csproj|solutionrelative:categoryproducts\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,8 +21,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 178,
-          "SelectedChildIndex": 5,
+          "DockedHeight": 196,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +34,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "CategoryProducts\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "CategoryProducts\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAjwD8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T03:03:06.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "CategoryProducts\\Views\\Products\\Index.cshtml",
               "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "CategoryProducts\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T08:19:17.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Categories\\Index.cshtml",
-              "RelativeDocumentMoniker": "CategoryProducts\\Views\\Categories\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Categories\\Index.cshtml",
-              "RelativeToolTip": "CategoryProducts\\Views\\Categories\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T07:59:38.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CategoryProducts\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CategoryProducts\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAB7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T07:51:40.735Z",
+              "WhenOpened": "2025-08-29T03:02:56.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "CategoryProducts\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "CategoryProducts\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAABAwCgAAAAAAAAAAAAAAA==",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "CategoryProducts\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\ispan\\Desktop\\ASP.NET MVC\\CoreMVC\\CategoryProducts\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "CategoryProducts\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwCIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T07:51:23.293Z",
+              "WhenOpened": "2025-08-29T03:00:54.739Z",
               "EditorCaption": ""
             }
           ]

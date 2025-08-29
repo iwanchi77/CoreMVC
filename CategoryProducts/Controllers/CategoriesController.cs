@@ -39,8 +39,14 @@ namespace CategoryProducts.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category = await _context.Categories.Select(c => new Category 
+            {   
+                CategoryId = c.CategoryId,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
+                Picture =null, //不載入圖片資料，節省記憶體
+
+			}).FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
@@ -53,9 +59,9 @@ namespace CategoryProducts.Controllers
 		[HttpGet]
         public async Task<FileResult> GetPicture(int id) //傳回圖片
 		{
-            Category? c =await _context.Categories.FindAsync(id);
+            Category? c = await _context.Categories.FindAsync(id);
             byte[]? ImageData = c?.Picture;//c有值就用c.Picture,沒有值就用預設值
-		    return File(ImageData, "image/bmp");//建成檔案回傳
+		    return File(ImageData, "image/jpeg");//建成檔案回傳
 		}
 
         // GET: Categories/Create
@@ -84,11 +90,18 @@ namespace CategoryProducts.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
+			{
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
+            var category = await _context.Categories.Select(c=>new Category 
+            {
+                CategoryId = c.CategoryId,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
+                Picture = null //不載入圖片資料，節省記憶體
+
+			}).FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
@@ -135,12 +148,18 @@ namespace CategoryProducts.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
+			{
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category = await _context.Categories.Select(c => new Category 
+            { 
+                CategoryId = c.CategoryId,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
+                Picture = null //不載入圖片資料，節省記憶體
+
+			}).FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
