@@ -1,7 +1,31 @@
-﻿@section Styles {
-	<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
 
-全端班的首頁
+@* 非全部頁面使用的，各自頁面的樣式段 *@
+@section Styles {
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <style></style>
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+}
 
 <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i>首頁</a>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>FUEN全端班 <a href="https://learn.microsoft.com/aspnet/core">全端班的專題發表 </a></p>
+</div>
+
+@* 非全部頁面使用的，各自頁面的程式段 *@
+@section Scripts {
+    <environment include="Development">
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <script>
+        test();
+    </script>
+}

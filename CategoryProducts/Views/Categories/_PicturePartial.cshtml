@@ -7,7 +7,7 @@
 	if (category != null && category.Picture != null)
 	{
 		<img src="@Url.Action("GetPicture", "Categories", new { id = Model.CategoryId })"
-		title="@Html.DisplayFor(model => model.CategoryName)" />
+		title="@Html.DisplayFor(model => model.CategoryName)" style="width:400px;height:300px "/>
 	}
 	else
 	{

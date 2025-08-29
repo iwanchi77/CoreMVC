@@ -61,7 +61,7 @@ namespace CategoryProducts.Controllers
 		{
             Category? c = await _context.Categories.FindAsync(id);
             byte[]? ImageData = c?.Picture;//c有值就用c.Picture,沒有值就用預設值
-		    return File(ImageData, "image/jpeg");//建成檔案回傳
+		    return File(ImageData, "image/bmp");//建成檔案回傳
 		}
 
         // GET: Categories/Create
@@ -79,7 +79,14 @@ namespace CategoryProducts.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+				if (Request.Form.Files["Picture"] != null)
+				{
+					using (BinaryReader reader = new BinaryReader(Request.Form.Files["Picture"].OpenReadStream()))
+					{
+						category.Picture = reader.ReadBytes((int)Request.Form.Files["Picture"].Length);
+					}
+				}
+				_context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -114,6 +121,8 @@ namespace CategoryProducts.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RequestFormLimits(MultipartBodyLengthLimit =2048000)]
+        [RequestSizeLimit(2048000)]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName,Description,Picture")] Category category)
         {
             if (id != category.CategoryId)
@@ -123,7 +132,20 @@ namespace CategoryProducts.Controllers
 
             if (ModelState.IsValid)
             {
-                try
+                Category? c = await _context.Categories.FindAsync(category.CategoryId);
+                if (Request.Form.Files["Picture"] != null)
+                {
+                    using (BinaryReader reader = new BinaryReader(Request.Form.Files["Picture"].OpenReadStream()))
+                    {
+                        category.Picture = reader.ReadBytes((int)Request.Form.Files["Picture"].Length);
+                    }
+                }
+                else 
+                {
+                    category.Picture = c.Picture; //沒有上傳圖片就用原來的圖片
+				}
+                _context.Entry(c).State = EntityState.Detached; //將c物件從EF核心的追蹤清單中移除
+				try
                 {
                     _context.Update(category);
                     await _context.SaveChangesAsync();
