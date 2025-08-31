@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CategoryName" class="control-label"></label>
@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Picture" class="control-label"></label>
-				<img src="~/images/no_image.jpg" title="尚無圖片" asp-append-version="true"/>
+				<img src="~/images/no_image.jpg" title="尚無圖片" asp-append-version="true" style="width:400px;height:300px"/>
                 <input type="file" asp-for="Picture" class="form-control" accept="image/*"/>
                 <span asp-validation-for="Picture" class="text-danger"></span>
             </div>
@@ -41,4 +41,13 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <environment include="Development">
+        <script src="~/js/previewimage.js" asp-append-version="true"></script>
+       
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/previewimage.min.js" asp-append-version="true"></script>
+    </environment>
+    <script>
+    </script>
 }

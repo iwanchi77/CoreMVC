@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fuen43Team0")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeae010298f47572c331a01043365b842472dde9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+017f56fde390052e8d8c6ca658f1c279f12bb640")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fuen43Team0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fuen43Team0")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

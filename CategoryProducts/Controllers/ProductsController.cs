@@ -28,24 +28,24 @@ namespace CategoryProducts.Controllers
 		[HttpPost]
 		public async Task<IActionResult> IndexJson()
 		{
-			var draw = Request.Form["draw"].FirstOrDefault();
-			var start = Convert.ToInt32(Request.Form["start"].FirstOrDefault());
-			var length = Convert.ToInt32(Request.Form["length"].FirstOrDefault());
-			var searchValue = Request.Form["search[value]"].FirstOrDefault()?.ToLower();
-			var query = _context.Products.AsQueryable();
-			if (!string.IsNullOrEmpty(searchValue))
+			var draw = Request.Form["draw"].FirstOrDefault(); //draw參數原封不動回傳
+			var start = Convert.ToInt32(Request.Form["start"].FirstOrDefault()); //分頁起始筆數
+			var length = Convert.ToInt32(Request.Form["length"].FirstOrDefault()); //分頁長度
+			var searchValue = Request.Form["search[value]"].FirstOrDefault()?.ToLower(); //搜尋字串
+			var query = _context.Products.AsQueryable(); //取得Products的IQueryable物件
+			if (!string.IsNullOrEmpty(searchValue)) //如果searchValue有值
 			{
-				query = query.Where(p => p.ProductName.ToLower().Contains(searchValue));
+				query = query.Where(p => p.ProductName.ToLower().Contains(searchValue));//選擇ProductName有包含searchValue的資料
 			}
-			var totalRecords = _context.Products.Count();
-			var filteredRecords = query.Count();
-			var data = query.Skip(start).Take(length);
-			return Ok(new
+			var totalRecords = _context.Products.Count(); //未過濾的總筆數
+			var filteredRecords = query.Count();          //過濾後的總筆數
+			var data = query.Skip(start).Take(length); //Skip跳過前start筆資料,Take取length筆資料
+			return Ok(new //回傳JSON資料
 			{
-				draw = draw,
-				recordsTotal = totalRecords,
-				recordsFiltered = filteredRecords,
-				data = data
+				draw = draw, //draw參數原封不動回傳
+				recordsTotal = totalRecords,  //未過濾的總筆數
+				recordsFiltered = filteredRecords, //過濾後的總筆數
+				data = data //分頁後的資料
 			});
 		}
 

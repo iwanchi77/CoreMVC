@@ -19,7 +19,7 @@ namespace CategoryProducts.Controllers
         }
 
         // GET: Categories
-        public async Task<IActionResult> Index() 
+        public async Task<IActionResult> Index() //因GetPicture方法會傳回圖片檔案，所以Index方法要做不載入圖片資料
 		{
 			//不載入圖片資料
 			return View(_context.Categories.Select(c => new Category
@@ -39,9 +39,9 @@ namespace CategoryProducts.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.Select(c => new Category 
-            {   
-                CategoryId = c.CategoryId,
+            var category = await _context.Categories.Select(c => new Category
+			{   //因GetPicture方法會傳回圖片檔案，所以Details方法要做不載入圖片資料
+				CategoryId = c.CategoryId,
                 CategoryName = c.CategoryName,
                 Description = c.Description,
                 Picture =null, //不載入圖片資料，節省記憶體
@@ -57,11 +57,11 @@ namespace CategoryProducts.Controllers
 
 		//GET: Categories/GetPicture/1
 		[HttpGet]
-        public async Task<FileResult> GetPicture(int id) //傳回圖片
+        public async Task<FileResult> GetPicture(int id) //async非同步方法，傳回圖片檔案
 		{
-            Category? c = await _context.Categories.FindAsync(id);
-            byte[]? ImageData = c?.Picture;//c有值就用c.Picture,沒有值就用預設值
-		    return File(ImageData, "image/bmp");//建成檔案回傳
+            Category? c = await _context.Categories.FindAsync(id);  //尋找主鍵值為id的資料
+			byte[]? ImageData = c?.Picture;  //因為Pictrue有可能會沒有值，所以要用c?.Picture，避免NullReferenceException
+			return File(ImageData, "image/bmp");//建成檔案回傳
 		}
 
         // GET: Categories/Create
@@ -81,10 +81,7 @@ namespace CategoryProducts.Controllers
             {
 				if (Request.Form.Files["Picture"] != null)
 				{
-					using (BinaryReader reader = new BinaryReader(Request.Form.Files["Picture"].OpenReadStream()))
-					{
-						category.Picture = reader.ReadBytes((int)Request.Form.Files["Picture"].Length);
-					}
+					ReadUploadImage(category);
 				}
 				_context.Add(category);
                 await _context.SaveChangesAsync();
@@ -93,23 +90,32 @@ namespace CategoryProducts.Controllers
             return View(category);
         }
 
-        // GET: Categories/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+		private void ReadUploadImage(Category category)
+		{
+			using (BinaryReader reader = new BinaryReader(Request.Form.Files["Picture"].OpenReadStream()))
+			{
+				category.Picture = reader.ReadBytes((int)Request.Form.Files["Picture"].Length);
+			}
+		}
+
+		// GET: Categories/Edit/5
+		public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
 			{
                 return NotFound();
             }
 
-            var category = await _context.Categories.Select(c=>new Category 
-            {
-                CategoryId = c.CategoryId,
+			//var category = await _context.Categories.FindAsync(id); //原本的寫法，會載入圖片資料
+			var category = await _context.Categories.Select(c=>new Category
+			{//因GetPicture方法會傳回圖片檔案，所以Edit方法要做不載入圖片資料
+				CategoryId = c.CategoryId,
                 CategoryName = c.CategoryName,
                 Description = c.Description,
                 Picture = null //不載入圖片資料，節省記憶體
 
-			}).FirstOrDefaultAsync(m => m.CategoryId == id);
-            if (category == null)
+			}).FirstOrDefaultAsync(m => m.CategoryId == id); //新的寫法，不載入圖片資料，FistOrDefaultAsync會傳回Category物件或null
+			if (category == null)
             {
                 return NotFound();
             }
@@ -133,18 +139,15 @@ namespace CategoryProducts.Controllers
             if (ModelState.IsValid)
             {
                 Category? c = await _context.Categories.FindAsync(category.CategoryId);
-                if (Request.Form.Files["Picture"] != null)
-                {
-                    using (BinaryReader reader = new BinaryReader(Request.Form.Files["Picture"].OpenReadStream()))
-                    {
-                        category.Picture = reader.ReadBytes((int)Request.Form.Files["Picture"].Length);
-                    }
-                }
+                if (Request.Form.Files["Picture"] != null) //!= null表示有上傳圖片
+				{
+					ReadUploadImage(category);
+				}
                 else 
                 {
                     category.Picture = c.Picture; //沒有上傳圖片就用原來的圖片
 				}
-                _context.Entry(c).State = EntityState.Detached; //將c物件從EF核心的追蹤清單中移除
+                _context.Entry(c).State = EntityState.Detached; //將c物件從EF核心的追蹤清單中移除，避免更新時發生衝突。卸離c，讓EF核心不再追蹤它。
 				try
                 {
                     _context.Update(category);
@@ -174,9 +177,9 @@ namespace CategoryProducts.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.Select(c => new Category 
-            { 
-                CategoryId = c.CategoryId,
+            var category = await _context.Categories.Select(c => new Category
+			{ //因GetPicture方法會傳回圖片檔案，所以Delete方法要做不載入圖片資料
+				CategoryId = c.CategoryId,
                 CategoryName = c.CategoryName,
                 Description = c.Description,
                 Picture = null //不載入圖片資料，節省記憶體

@@ -4,5 +4,11 @@
     "inputFiles": [
       "wwwroot/css/MySheet.css"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/js/previewImage.min.js",
+    "inputFiles": [
+      "wwwroot/js/previewImage.js"
+    ]
   }
 ]

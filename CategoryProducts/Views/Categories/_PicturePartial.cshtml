@@ -7,11 +7,11 @@
 	if (category != null && category.Picture != null)
 	{
 		<img src="@Url.Action("GetPicture", "Categories", new { id = Model.CategoryId })"
-		title="@Html.DisplayFor(model => model.CategoryName)" style="width:400px;height:300px "/>
+		title="@Html.DisplayFor(model => model.CategoryName)" style="width:400px;height:300px"/>
 	}
 	else
 	{
-		<img src="~/images/NO_Image.jpg" title="尚無參考圖片" asp-append-version="true"/>
+		<img src="~/images/NO_Image.jpg" title="尚無參考圖片" asp-append-version="true" style="width:400px;height:300px" />
 	}
 }
 
