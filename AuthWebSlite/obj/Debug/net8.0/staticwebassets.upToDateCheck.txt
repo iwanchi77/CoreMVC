@@ -58,3 +58,7 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\qrcode\qr.js
+wwwroot\qrcode\qr.min.js
+wwwroot\qrcode\qrcode.js
+wwwroot\qrcode\qrcode.min.js

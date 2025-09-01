@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthWebSlite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6f23c119993719d3fd2bcfd1d3e948c39708647")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+190b247c9e7bc006e07f8502609ecba350dc7aae")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthWebSlite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthWebSlite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
