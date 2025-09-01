@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoryProducts", "Categor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuen43Team0", "Fuen43Team0\Fuen43Team0.csproj", "{C8103592-D7FE-4B7F-98F7-D82018E84EE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthWebSlite", "AuthWebSlite\AuthWebSlite.csproj", "{F8BA069A-4570-4A0C-9660-9E984F2D625E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C8103592-D7FE-4B7F-98F7-D82018E84EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8103592-D7FE-4B7F-98F7-D82018E84EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8103592-D7FE-4B7F-98F7-D82018E84EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8BA069A-4570-4A0C-9660-9E984F2D625E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BA069A-4570-4A0C-9660-9E984F2D625E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BA069A-4570-4A0C-9660-9E984F2D625E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BA069A-4570-4A0C-9660-9E984F2D625E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
